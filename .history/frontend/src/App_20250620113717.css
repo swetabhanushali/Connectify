@@ -1,3 +1,4 @@
+/* Root container */
 .landingPageContainer {
   width: 100vw;
   height: 100vh;
@@ -15,6 +16,7 @@
   100% { background-position: 0% 50%; }
 }
 
+/* Navbar */
 .landingPageContainer nav {
   padding-inline: 1.2rem;
   padding-block: 1.4rem;
@@ -36,6 +38,7 @@
   text-shadow: 1px 1px 6px rgba(138, 43, 226, 0.3);
 }
 
+/* Navlist (mobile-first hidden) */
 .navlist {
   display: none;
   flex-direction: column;
@@ -78,6 +81,7 @@
 .landingImageContainer{
   margin-top: 3rem;
 }
+/* Hamburger icon */
 .hamburger {
    display: flex;
   flex-direction: column;
@@ -110,6 +114,7 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Desktop override */
 @media (min-width: 769px) {
   .navlist {
     display: flex !important;
@@ -124,11 +129,9 @@
   .hamburger {
     display: none;
   }
-
-
-  
 }
 
+/* Main content */
 .landingMainContainer {
   display: flex;
   justify-content: space-between;
@@ -191,6 +194,7 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
   .landingMainContainer {
     flex-direction: column;
@@ -283,15 +287,17 @@
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 6px rgba(138, 43, 226, 0.3);
 }
-  
-  .meetContainer {
+
+
+
+.meetContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5vw;
   height: 80vh;
   padding: 0 5vw;
-  flex-wrap: nowrap; 
+  flex-wrap: wrap; 
 }
 
 .leftPanel {
@@ -301,7 +307,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  margin-top: -3rem;
+  margin-top: -3rem; 
   margin-left: 5rem;
 }
 
@@ -314,23 +320,14 @@
 
 .rightPanel > img {
   width: 90%;
-  max-width: 700px;
+  max-width: 700px; 
   height: auto;
   border-radius: 20px;
   object-fit: contain;
   margin-left: 10rem;
 }
 
-@media (max-width: 1024px) {
-  .rightPanel > img {
-    max-width: 500px;
-    margin-left: 5rem;
-  }
 
-  .leftPanel {
-    margin-left: 2rem;
-  }
-}
 
 
 @media (max-width: 768px) {
@@ -345,7 +342,8 @@
     max-width: 100%;
     margin: 0 0 2rem 0;
     padding: 1rem;
-    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .rightPanel {
@@ -363,8 +361,45 @@
   }
 }
 
+@media (max-width: 1024px) {
+ 
+  .rightPanel > img {
+    max-width: 500px;
+    margin-left: 5rem;
+  }
+
+  .leftPanel {
+    margin-left: 2rem;
+  }
+}
+
+
+ .meetContainer {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .leftPanel {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .rightPanel {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .rightPanel > img {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
 
 @media (max-width: 480px) {
+  
+
   .leftPanel {
     padding: 0.5rem;
   }
@@ -374,3 +409,5 @@
     border-radius: 12px;
   }
 }
+
+

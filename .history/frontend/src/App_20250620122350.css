@@ -126,7 +126,44 @@
   }
 
 
-  
+.meetContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  height: 80vh;
+  padding: 0 5vw;
+  flex-wrap: wrap; 
+}
+
+.leftPanel {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: -3rem; 
+  margin-left: 5rem;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightPanel > img {
+  width: 90%;
+  max-width: 700px; 
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  margin-left: 10rem;
+}
+
+
 }
 
 .landingMainContainer {
@@ -283,54 +320,10 @@
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 6px rgba(138, 43, 226, 0.3);
 }
-  
-  .meetContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5vw;
-  height: 80vh;
-  padding: 0 5vw;
-  flex-wrap: nowrap; 
-}
 
-.leftPanel {
-  flex: 1;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  margin-top: -3rem;
-  margin-left: 5rem;
-}
 
-.rightPanel {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.rightPanel > img {
-  width: 90%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 20px;
-  object-fit: contain;
-  margin-left: 10rem;
-}
 
-@media (max-width: 1024px) {
-  .rightPanel > img {
-    max-width: 500px;
-    margin-left: 5rem;
-  }
-
-  .leftPanel {
-    margin-left: 2rem;
-  }
-}
 
 
 @media (max-width: 768px) {
@@ -345,7 +338,8 @@
     max-width: 100%;
     margin: 0 0 2rem 0;
     padding: 1rem;
-    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .rightPanel {
@@ -363,8 +357,45 @@
   }
 }
 
+@media (max-width: 1024px) {
+ 
+  .rightPanel > img {
+    max-width: 500px;
+    margin-left: 5rem;
+  }
+
+  .leftPanel {
+    margin-left: 2rem;
+  }
+}
+
+
+ .meetContainer {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .leftPanel {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .rightPanel {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .rightPanel > img {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
 
 @media (max-width: 480px) {
+  
+
   .leftPanel {
     padding: 0.5rem;
   }
@@ -374,3 +405,5 @@
     border-radius: 12px;
   }
 }
+
+

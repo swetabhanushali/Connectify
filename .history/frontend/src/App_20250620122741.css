@@ -291,7 +291,7 @@
   gap: 5vw;
   height: 80vh;
   padding: 0 5vw;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap; /* Important: keep panels side-by-side on desktop */
 }
 
 .leftPanel {
@@ -321,6 +321,7 @@
   margin-left: 10rem;
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
   .rightPanel > img {
     max-width: 500px;
@@ -332,7 +333,7 @@
   }
 }
 
-
+/* Mobile & Small Tablets */
 @media (max-width: 768px) {
   .meetContainer {
     flex-direction: column;
@@ -363,7 +364,7 @@
   }
 }
 
-
+/* Extra small screens */
 @media (max-width: 480px) {
   .leftPanel {
     padding: 0.5rem;
